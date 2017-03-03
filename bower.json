@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio",
+  "authors": [
+    "ColinBohn <colinbohn@gmail.com>"
+  ],
+  "description": "Portfolio page",
+  "main": "",
+  "license": "All rights reserved",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "milligram-sass": "^1.3.0"
+  }
+}
