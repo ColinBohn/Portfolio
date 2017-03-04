@@ -17,7 +17,7 @@ var
   // folders
   folder = {
     src: 'src/',
-    build: 'build/',
+    build: 'docs/',
     bower: 'bower_components/'
   }
 ;
