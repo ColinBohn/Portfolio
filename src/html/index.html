@@ -8,21 +8,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
         
-    <link href="css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="css/all.css" type="text/css" rel="stylesheet">
     <link href="css/milligram_theme.css" type="text/css" rel="stylesheet">
-    <link href="css/main.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Quicksand" rel="stylesheet">
 
 </head>
 <body>
 <div class="background">
-    <div class="container">
-        <div class="intro">
-            Hi, I'm Colin.
-            <div class="intro-small">Web developer and system engineer.</div>
-            <button class="button">See my work</button>
+    <div class="intro">
+        Hi, I'm Colin.
+        <div class="intro-small">Web developer and system engineer.</div>
+        <a href="#start" id="startButton"><button class="button">See my work</button></a>
+    </div>
+</div>
+<div class="container" id="start">
+    <div class="row feature">
+        <div class="column">
+            <h1>allcall.io</h1>
+            <p>Allcall is an open-source project that leverages modern web technologies to provide a web-based interface for playback of audio alerts across multiple physical locations.</p>
+            <h4><b>Tech: </b>Laravel, Flask, Docker</h4>
+            <a href="http://allcall.io"><button class="button button-outline">Visit Website</button></a>
+        </div>
+        <div class="device device-right">
+            <div class="md-iphone-5 md-white-device md-glare">
+                <div class="md-body">
+                    <div class="md-buttons"></div>
+                    <div class="md-front-camera"></div>
+                    <div class="md-top-speaker"></div>
+                    
+                    <div class="md-screen">
+                    <img src="images/allcall-iphone.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row feature">
+        <div class="device device-left">
+            <div class="md-macbook-pro md-glare">
+                <div class="md-lid">
+                    <div class="md-camera"></div>
+                
+                    <div class="md-screen">
+                    <img src="images/udacity-macbook.svg">
+                    </div>
+                
+                </div>
+                <div class="md-base"></div>
+            </div>
+        </div>
+        <div class="column">
+            <h1>Udacity Projects</h1>
+            <p>A set of projects that I've created while completing the Udacity Full-Stack Nanodegree.</p>
+            <h4><b>Tech: </b>Python, Google Cloud, Vagrant</h4>
+            <a href="https://github.com/ColinBohn/UdacityProjects"><button class="button button-outline">View on GitHub</button></a>
+        </div>
+    </div>
+    <div class="row feature">
+<div class="column column">
+            <h1>Portfolio Page</h1>
+            <p>This portfolio page is open source. It's developed using modern web libraries and utilities.</p>
+            <h4><b>Tech: </b>Bower, Gulp</h4>
+            <a href="https://github.com/ColinBohn/Portfolio"><button class="button button-outline">View on Github</button></a>
+        </div>
+        <div class="device device-right">
+            <div class="md-imac md-glare">
+                <div class="md-body">
+                    <div class="md-top">
+                        <div class="md-camera"></div>
+            
+                        <div class="md-screen">
+                            <img src="images/portfolio-imac.svg">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="md-base">
+                    <div class="md-stand"></div>
+                    <div class="md-foot"></div>
+                </div>
+            </div>  
         </div>
     </div>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>

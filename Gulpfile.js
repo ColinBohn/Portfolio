@@ -4,7 +4,11 @@ var
   newer = require('gulp-newer'),
   imagemin = require('gulp-imagemin'),
   sass = require('gulp-sass'),
-  cssnano = require('cssnano'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  stripdebug = require('gulp-strip-debug'),
+  htmlclean = require('gulp-htmlclean'),
+  cssnano = require('gulp-cssnano'),
 
 
   // development mode?
@@ -13,29 +17,40 @@ var
   // folders
   folder = {
     src: 'src/',
-    build: 'build/'
+    build: 'build/',
+    bower: 'bower_components/'
   }
 ;
 
 
-gulp.task('default', ['html', 'css', 'images', 'dep', 'sass']);
+gulp.task('default', ['html', 'css', 'images', 'sass', 'js']);
 
 
-gulp.task('watch', [], function() {
+gulp.task('watch', function() {
   gulp.watch(folder.src + 'images/*', ['images']);
   gulp.watch(folder.src + 'html/*', ['html']);
   gulp.watch(folder.src + 'css/*', ['css']);
   gulp.watch(folder.src + 'sass/*', ['sass']);
+  gulp.watch(folder.src + 'js/*', ['js']);
 });
 
 
-gulp.task('dep', [], function() {
-  return gulp.src(['bower_components/normalize.css/normalize.css'])
-                  .pipe(gulp.dest(folder.build + 'css/'));
+gulp.task('js', function() {
+
+  var jsbuild = gulp.src([folder.src + 'js/*', folder.bower + 'zenscroll/zenscroll.js'])
+    .pipe(concat('main.js'));
+
+  if (!devBuild) {
+    jsbuild = jsbuild
+      .pipe(stripdebug())
+      .pipe(uglify());
+  }
+
+  return jsbuild.pipe(gulp.dest(folder.build + 'js/'));
 });
 
 
-gulp.task('sass', [], function () {
+gulp.task('sass', function () {
   return gulp
     // Find all sass files from the folder
     .src(folder.src + 'sass/milligram_theme.sass')
@@ -48,7 +63,7 @@ gulp.task('sass', [], function () {
 });
 
 
-gulp.task('html', [], function() {
+gulp.task('html', function() {
   var
     page = gulp.src(folder.src + 'html/*')
       .pipe(newer(folder.build));
@@ -71,12 +86,14 @@ gulp.task('images', function() {
 });
 
 
-gulp.task('css', [], function() {
-  var css = gulp.src(folder.src + 'css/*');
+gulp.task('css', function() {
+  var css = gulp.src([folder.bower + 'normalize.css/normalize.css', folder.bower + 'minimal-devices/css/*', folder.src + 'css/*'])
+  .pipe(concat('all.css'));
+
   if (!devBuild) {
     css = css.pipe(cssnano());
   }
-  
+
   return css.pipe(gulp.dest(folder.build + 'css/'));
 
 });

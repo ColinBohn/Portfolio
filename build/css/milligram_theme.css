@@ -29,7 +29,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #606c76;
+  color: #444;
   font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.6em;
   font-weight: 300;
@@ -88,8 +88,8 @@ input[type='submit'] {
   input[type='reset']:hover,
   input[type='submit']:focus,
   input[type='submit']:hover {
-    background-color: #606c76;
-    border-color: #606c76;
+    background-color: #444;
+    border-color: #444;
     color: #fff;
     outline: 0; }
   .button[disabled],
@@ -127,8 +127,8 @@ input[type='submit'] {
     input[type='submit'].button-outline:focus,
     input[type='submit'].button-outline:hover {
       background-color: transparent;
-      border-color: #606c76;
-      color: #606c76; }
+      border-color: #444;
+      color: #444; }
     .button.button-outline[disabled]:focus, .button.button-outline[disabled]:hover,
     button.button-outline[disabled]:focus,
     button.button-outline[disabled]:hover,
@@ -159,7 +159,7 @@ input[type='submit'] {
     input[type='submit'].button-clear:hover {
       background-color: transparent;
       border-color: transparent;
-      color: #606c76; }
+      color: #444; }
     .button.button-clear[disabled]:focus, .button.button-clear[disabled]:hover,
     button.button-clear[disabled]:focus,
     button.button-clear[disabled]:hover,
@@ -393,7 +393,7 @@ a {
   color: #ff7700;
   text-decoration: none; }
   a:focus, a:hover {
-    color: #606c76; }
+    color: #444; }
 
 /*!
  * Milligram-sass v1.3.0
