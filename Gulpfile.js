@@ -37,7 +37,7 @@ gulp.task('watch', function() {
 
 gulp.task('js', function() {
 
-  var jsbuild = gulp.src([folder.src + 'js/*', folder.bower + 'zenscroll/zenscroll.js'])
+  var jsbuild = gulp.src([folder.src + 'js/*', folder.bower + 'zenscroll/zenscroll.js', folder.bower + 'wow/dist/wow.js'])
     .pipe(concat('main.js'));
 
   if (!devBuild) {
@@ -87,7 +87,7 @@ gulp.task('images', function() {
 
 
 gulp.task('css', function() {
-  var css = gulp.src([folder.bower + 'normalize.css/normalize.css', folder.bower + 'minimal-devices/css/*', folder.src + 'css/*'])
+  var css = gulp.src([folder.bower + 'normalize.css/normalize.css', folder.bower + 'minimal-devices/css/*',  folder.bower + 'animate.css/animate.css', folder.src + 'css/*'])
   .pipe(concat('all.css'));
 
   if (!devBuild) {
