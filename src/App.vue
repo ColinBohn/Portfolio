@@ -20,6 +20,7 @@
           >
             <WorkExperience/>
             <EducationHistory/>
+            <TechnologiesUsed/>
           </v-flex>
         </v-layout>
       </v-container>
@@ -32,6 +33,7 @@ import TopParallax from './components/TopParallax'
 import PersonalInfo from './components/PersonalInfo'
 import WorkExperience from './components/WorkExperience'
 import EducationHistory from './components/EducationHistory'
+import TechnologiesUsed from './components/TechnologiesUsed'
 
 export default {
   name: 'App',
@@ -39,7 +41,8 @@ export default {
     TopParallax,
     PersonalInfo,
     WorkExperience,
-    EducationHistory
+    EducationHistory,
+    TechnologiesUsed
   }
 }
 </script>

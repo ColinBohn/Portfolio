@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import UdacityLogo from '@/assets/udacity-logo.svg'
+
 export default {
   data () {
     return {
@@ -38,7 +40,7 @@ export default {
           title: 'Full Stack Web Developer Nanodegree',
           school: 'Udacity',
           when: '2017',
-          logo: 'https://www.udacity.com/assets/iridium/images/core/header/udacity-wordmark.svg'
+          logo: UdacityLogo
         }
       ]
     }

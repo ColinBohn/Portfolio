@@ -1,17 +1,17 @@
 <template>
   <section class="mb-4">
     <v-card class="elevation-4">
-      <with-root :show="isMobile">
+      <with-root :show="isSm">
         <v-layout>
-          <with-root :show="isMobile">
+          <with-root :show="isSm">
             <v-flex xs6>
               <v-img
                 :src="profilePic"
-                :height="isMobile ? '380px' : '300px'"
+                :height="isSm ? '380px' : '300px'"
               />
             </v-flex>
           </with-root>
-          <with-root :show="isMobile">
+          <with-root :show="isSm">
             <v-flex xs6>
               <v-card-title primary-title>
                 <div class="display-1">Colin Bohn</div>
@@ -99,12 +99,22 @@ export default {
       email: 'colinbohn' + '@gmail.com', // hopefully avoid spambots?
       linkedin: 'colinbohn',
       github: 'colinbohn',
-      keybase: 'colinbohn'
+      keybase: 'colinbohn',
+      resizeListener: null,
+      isSm: false
     }
   },
-  computed: {
-    isMobile () {
-      return ['xs', 'sm'].includes(this.$vuetify.breakpoint.name)
+  created () {
+    this.updateScreenSize()
+    this.resizeListener = window.addEventListener('resize', this.updateScreenSize)
+  },
+  methods: {
+    updateScreenSize () {
+      if (document.body.clientWidth > 600 && document.body.clientWidth < 960) {
+        this.isSm = true
+      } else {
+        this.isSm = false
+      }
     }
   }
 }

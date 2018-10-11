@@ -39,6 +39,9 @@
 </template>
 
 <script>
+import ScsdLogo from '@/assets/scsd-logo.svg'
+import WaveLogo from '@/assets/wave-logo.svg'
+
 export default {
   data () {
     return {
@@ -48,7 +51,7 @@ export default {
           employer: 'Wave Broadband',
           start: 'July 2017',
           end: 'Present',
-          logo: 'https://upload.wikimedia.org/wikipedia/en/5/59/Wave_Broadband%27s_Logo.svg',
+          logo: WaveLogo,
           bullets: [
             'Design and develop web applications and APIs using a modern web stack',
             'Advocate and advance containerized infrastructure for applications',
@@ -61,7 +64,7 @@ export default {
           employer: 'Stanwood-Camano School District',
           start: 'June 2014',
           end: 'July 2017',
-          logo: 'http://www.scsd.ac/images/scsd.svg',
+          logo: ScsdLogo,
           bullets: [
             'Spearheaded new and innovative projects as part of district technology levy',
             'Developed web apps including district status page, tech KB, and student portal',
