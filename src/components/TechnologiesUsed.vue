@@ -6,20 +6,22 @@
         <template v-for="tech in techs">
           <v-tooltip
             :key="tech.name"
-            bottom
+            bottom=""
           >
             <v-hover
               slot="activator"
             >
               <v-btn
                 slot-scope="{ hover }"
-                :color="hover ? tech.color : 'grey lighten-2'"
+                :color="tech.color"
                 :href="tech.link"
+                :outline="!hover"
+                :style="hover ? '' : lightBgStyle(tech.color)"
                 fab
                 small
               >
                 <v-icon
-                  :color="hover ? 'white' : 'black'"
+                  :color="hover ? 'white' : 'grey darken-1'"
                 >fab fa-{{ tech.icon }}</v-icon>
               </v-btn>
             </v-hover>
@@ -32,6 +34,8 @@
 </template>
 
 <script>
+import Color from 'color'
+
 export default {
   data () {
     return {
@@ -45,7 +49,7 @@ export default {
         {
           name: 'Node JS',
           icon: 'node-js',
-          color: '#215732',
+          color: '#44883e',
           link: 'https://nodejs.org/en/'
         },
         {
@@ -63,7 +67,7 @@ export default {
         {
           name: 'Python',
           icon: 'python',
-          color: '#ffde57',
+          color: '#4584b6',
           link: 'https://www.python.org/'
         },
         {
@@ -85,6 +89,12 @@ export default {
           link: 'https://openid.net/connect/'
         }
       ]
+    }
+  },
+  methods: {
+    lightBgStyle (color) {
+      let lightBrand = Color(color).alpha(0.1).rgb()
+      return 'background-color: ' + lightBrand + ' !important'
     }
   }
 }
