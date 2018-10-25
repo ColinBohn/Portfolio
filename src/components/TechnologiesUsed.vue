@@ -1,12 +1,12 @@
 <template>
   <section>
-    <v-card class="pb-4 mb-4">
-      <v-card-title class="display-1">Technologies Used</v-card-title>
-      <div class="text-xs-center">
+    <v-card class="mb-4">
+      <v-card-title class="display-1">Technologies</v-card-title>
+      <div class="text-xs-center pl-4 pr-4 pb-4">
         <template v-for="tech in techs">
           <v-tooltip
             :key="tech.name"
-            bottom=""
+            bottom
           >
             <v-hover
               slot="activator"

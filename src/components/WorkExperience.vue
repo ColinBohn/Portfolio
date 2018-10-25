@@ -17,6 +17,7 @@
               </v-list-tile-content>
               <v-list-tile-avatar
                 size="120"
+                style="min-width:125px"
                 tile
               >
                 <img :src="job.logo">

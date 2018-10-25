@@ -8,8 +8,14 @@
       align-center
       style="padding-top:140px"
     >
-      <h1 class="mb-4 display-4 text-xs-center intro-text">Hi, I'm Colin.</h1>
-      <div class="display-1 mb-3 text-xs-center intro-text">Software engineer and systems specialist.</div>
+      <h1
+        class="mb-4 text-xs-center intro-text"
+        style="font-size: 12vmin"
+      >Hi, I'm Colin.</h1>
+      <div
+        class="mb-3 text-xs-center intro-text"
+        style="font-size: 7vmin"
+      >Software engineer and systems specialist.</div>
       <v-slide-y-reverse-transition>
         <v-btn
           v-show="isMounted"
@@ -46,7 +52,7 @@ export default {
   },
   methods: {
     scrollDown () {
-      zenscroll.toY(400, 1000)
+      zenscroll.toY(600, 1000)
     }
   },
 }

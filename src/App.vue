@@ -2,21 +2,23 @@
   <v-app>
     <v-content>
       <TopParallax/>
-      <v-container fluid>
+      <v-container>
         <v-layout
           row
           wrap
+          justify-space-between
         >
           <v-flex
             md4
-            lg3
+            lg4
+            mx-3
           >
             <PersonalInfo/>
           </v-flex>
           <v-flex
-            offset-md1
             md6
             lg7
+            mx-3
           >
             <WorkExperience/>
             <EducationHistory/>
@@ -46,3 +48,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-card {
+  border-radius: 8px;
+}
+</style>
