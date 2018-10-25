@@ -11,14 +11,12 @@
           <v-flex
             md4
             lg4
-            mx-3
           >
             <PersonalInfo/>
           </v-flex>
           <v-flex
             md6
             lg7
-            mx-3
           >
             <WorkExperience/>
             <EducationHistory/>
