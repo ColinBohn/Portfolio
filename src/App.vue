@@ -10,13 +10,11 @@
         >
           <v-flex
             md4
-            lg4
           >
             <PersonalInfo/>
           </v-flex>
           <v-flex
-            md6
-            lg7
+            md7
           >
             <WorkExperience/>
             <EducationHistory/>

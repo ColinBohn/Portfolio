@@ -10,22 +10,22 @@
     >
       <h1
         class="mb-4 text-xs-center intro-text"
-        style="font-size: 12vmin"
       >Hi, I'm Colin.</h1>
       <div
         class="mb-3 text-xs-center intro-text"
-        style="font-size: 7vmin"
       >Software engineer and systems specialist.</div>
       <v-slide-y-reverse-transition>
         <v-btn
           v-show="isMounted"
           class="orange darken-2 mt-5"
           dark
-          round
-          large
+          fab
+          medium
           @click="scrollDown"
         >
-          <strong>Learn about me</strong>
+          <strong>
+            <i class="fas fa-chevron-down" />
+          </strong>
         </v-btn>
       </v-slide-y-reverse-transition>
     </v-layout>
@@ -64,5 +64,21 @@ export default {
   font-family: Quicksand !important;
   font-weight: 400;
   text-shadow: 0px 0px 15px #222;
+}
+@media only screen and (min-width: 601px) {
+    h1.intro-text {
+      font-size: 90px;
+    }
+    div.intro-text {
+      font-size: 32px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    h1.intro-text {
+      font-size: 16vw;
+    }
+    div.intro-text {
+      font-size: 7vw;
+    }
 }
 </style>
