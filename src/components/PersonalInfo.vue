@@ -106,7 +106,6 @@
 <script>
 import ColinPhoto from '@/assets/colin.png'
 import WithRoot from './WithRoot'
-import Resume from '@/assets/Resume.pdf'
 
 export default {
   components: {
@@ -115,7 +114,7 @@ export default {
   data () {
     return {
       profilePic: ColinPhoto,
-      resumeLink: Resume,
+      resumeLink: '/resume.pdf',
       email: 'colinbohn' + '@gmail.com', // hopefully avoid spambots?
       linkedin: 'colinbohn',
       github: 'colinbohn',
