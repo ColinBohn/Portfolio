@@ -21,7 +21,10 @@
                 </span>
               </v-card-title>
               <v-list>
-                <v-list-tile :href="resumeLink">
+                <v-list-tile
+                  :href="resumeLink"
+                  target="_blank"
+                >
                   <v-list-tile-action>
                     <v-icon
                       color="blue"
