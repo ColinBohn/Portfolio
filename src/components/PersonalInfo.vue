@@ -21,7 +21,7 @@
                 </span>
               </v-card-title>
               <v-list>
-                <v-list-tile
+                <!-- <v-list-tile
                   :href="resumeLink"
                   target="_blank"
                 >
@@ -37,7 +37,7 @@
                   </v-list-tile-content>
                 </v-list-tile>
 
-                <v-divider inset/>
+                <v-divider inset/> -->
 
                 <v-list-tile :href="'mailto:' + email">
                   <v-list-tile-action>

@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import LoftiumLogo from '@/assets/loftium-logo.svg'
 import ScsdLogo from '@/assets/scsd-logo.svg'
 import WaveLogo from '@/assets/wave-logo.svg'
 
@@ -48,16 +49,28 @@ export default {
     return {
       jobs: [
         {
+          title: 'Software Engineer',
+          employer: 'Loftium',
+          start: 'June 2019',
+          end: 'Present',
+          logo: LoftiumLogo,
+          bullets: [
+            'Developing a pixel-perfect React frontend in TypeScript to replace legacy frontend',
+            'Building out a robust, test-driven API to support the frontend with Ruby on Rails',
+            'Solving unique problems for a one-of-a-kind, rapid growth startup',
+          ]
+        },
+        {
           title: 'Software Engineer II',
           employer: 'Wave Broadband',
           start: 'July 2017',
-          end: 'Present',
+          end: 'June 2019',
           logo: WaveLogo,
           bullets: [
-            'Design and develop web applications and APIs using a modern web stack',
-            'Advocate and advance containerized infrastructure for applications',
-            'Troubleshoot, identify, and resolve server performance problems',
-            'Collaborate with peers on best practices and promote knowledge sharing'
+            'Designed and developed web applications and APIs using a modern web stack',
+            'Advocated and advanced containerized infrastructure for applications',
+            'Troubleshot, identified, and resolved server performance problems',
+            'Collaborated with peers on best practices and promoted knowledge sharing'
           ]
         },
         {
