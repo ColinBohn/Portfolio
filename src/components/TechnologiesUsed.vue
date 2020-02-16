@@ -22,7 +22,7 @@
               >
                 <v-icon
                   :color="hover ? 'white' : 'grey darken-1'"
-                >fab fa-{{ tech.icon }}</v-icon>
+                >{{ tech.class }}</v-icon>
               </v-btn>
             </v-hover>
             <span>{{ tech.name }}</span>
@@ -41,50 +41,62 @@ export default {
     return {
       techs: [
         {
+          name: 'React',
+          class: 'fab fa-react',
+          color: '#00d8ff',
+          link: 'https://reactjs.org/'
+        },
+        {
+          name: 'Ruby on Rails',
+          class: 'fas fa-gem',
+          color: '#cc0000',
+          link: 'https://rubyonrails.org/'
+        },
+        {
           name: 'Vue.JS',
-          icon: 'vuejs',
+          class: 'fab fa-vuejs',
           color: '#42b883',
           link: 'https://vuejs.org/'
         },
         {
           name: 'Node JS',
-          icon: 'node-js',
+          class: 'fab fa-node-js',
           color: '#44883e',
           link: 'https://nodejs.org/en/'
         },
         {
           name: 'Laravel',
-          icon: 'laravel',
+          class: 'fab fa-laravel',
           color: '#f55247',
           link: 'https://laravel.com/'
         },
         {
           name: 'PHP',
-          icon: 'php',
+          class: 'fab fa-php',
           color: '#8892be',
           link: 'https://secure.php.net/'
         },
         {
           name: 'Python',
-          icon: 'python',
+          class: 'fab fa-python',
           color: '#4584b6',
           link: 'https://www.python.org/'
         },
         {
           name: 'Docker',
-          icon: 'docker',
+          class: 'fab fa-docker',
           color: '#0db7ed',
           link: 'https://www.docker.com/'
         },
         {
           name: 'Git',
-          icon: 'git',
+          class: 'fab fa-git',
           color: '#f05033',
           link: 'https://git-scm.com/'
         },
         {
           name: 'OpenID Connect',
-          icon: 'openid',
+          class: 'fab fa-openid',
           color: '#f8931e',
           link: 'https://openid.net/connect/'
         }
