@@ -1,1 +1,5 @@
-To deploy: `vcg --CNAME=colinbohn.me`
+To deploy:
+```
+cd dist
+vcg --CNAME=colinbohn.me
+```
