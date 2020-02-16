@@ -17,7 +17,7 @@
                 <div class="display-1">Colin Bohn</div>
                 <v-spacer />
                 <span>
-                  <strong>Software Engineer II</strong> – Wave Broadband
+                  <strong>Software Engineer</strong> – Loftium
                 </span>
               </v-card-title>
               <v-list>
